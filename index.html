@@ -5,29 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>UP Gym | Academia em Ponta Porã - MS · Musculação, ginástica e dança</title>
 <meta name="description" content="UP Gym, a academia mais completa da fronteira. Equipamentos Real Leader, esteiras conectadas e ambiente climatizado no Centro de Ponta Porã - MS. Agende sua aula experimental grátis.">
-<meta name="theme-color" content="#0A0A0B">
+<meta name="theme-color" content="#0B0B0B">
 <link rel="canonical" href="https://renatomontiel.github.io/upgym-site/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="UP Gym | Academia em Ponta Porã - MS">
 <meta property="og:description" content="A academia mais completa da fronteira. Agende sua aula experimental grátis.">
-<meta property="og:image" content="assets/hero.jpg">
+<meta property="og:image" content="https://renatomontiel.github.io/upgym-site/assets/hero.jpg">
 <link rel="icon" href="assets/icone.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/hero.jpg">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="topo" id="topo">
-  <a class="marca" href="#inicio" aria-label="UP Gym, voltar ao início">
-    <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 37 20 20 37 3 20Z" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M20 10v17M14 16l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg>
-    <span>UP GYM</span>
-  </a>
+  <a class="topo-marca" href="#inicio" aria-label="UP Gym, voltar ao início"><img src="assets/logo.svg" alt="UP Gym Espaço Fitness" width="48" height="50"></a>
   <nav class="menu" aria-label="Seções">
     <a href="#estrutura">Estrutura</a>
+    <a href="#avaliacoes">Avaliações</a>
     <a href="#endereco">Endereço</a>
   </nav>
   <a class="topo-cta" data-wa href="#">Aula grátis</a>
@@ -35,27 +33,39 @@
 
 <main>
   <section class="hero" id="inicio">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero.jpg" aria-hidden="true">
+    <video class="hero-video foto-pb" autoplay muted loop playsinline preload="auto" poster="assets/hero.jpg" aria-hidden="true">
       <source src="assets/hero.mp4" type="video/mp4">
     </video>
     <div class="hero-veu" aria-hidden="true"></div>
+    <div class="faixa faixa-cima" aria-hidden="true"></div>
+    <div class="faixa faixa-baixo" aria-hidden="true"></div>
     <div class="hero-conteudo">
-      <h1 class="hero-titulo" data-c="titulo">Suba de nível.</h1>
+      <img class="hero-logo" src="assets/logo.svg" alt="" width="110" height="115">
+      <h1 class="hero-titulo" id="titulo">Suba de nível.</h1>
       <p class="hero-sub" data-c="subtitulo"></p>
-      <div class="hero-acoes">
-        <a class="botao" data-wa href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span data-c="botaoPrincipal">Agendar aula experimental grátis</span></a>
-        <a class="nota" id="nota" href="#avaliacoes"><span class="estrelas" aria-hidden="true">★★★★★</span> <strong data-c="notaGoogle"></strong> no Google · <span data-c="totalAvaliacoes"></span> avaliações</a>
-      </div>
+      <a class="botao" data-wa href="#"><span data-c="botaoPrincipal">Agendar aula experimental grátis</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
-    <a class="descer" href="#manifesto" aria-label="Rolar para baixo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
+    <ul class="hero-rodape" aria-label="Informações rápidas">
+      <li data-c="cidade"></li>
+      <li id="hero-horario"></li>
+      <li><a href="#avaliacoes"><span data-c="notaGoogle"></span> no Google · <span data-c="totalAvaliacoes"></span> avaliações</a></li>
+    </ul>
   </section>
 
-  <section class="manifesto" id="manifesto">
+  <section class="manifesto papel" id="manifesto">
     <p class="manifesto-texto" data-c="manifesto" data-palavras></p>
   </section>
 
+  <section class="abertura" id="abertura" aria-label="A academia por dentro">
+    <div class="abertura-palco">
+      <img class="abertura-foto foto-pb" src="assets/foto2.jpg" alt="Salão de musculação da UP Gym" loading="lazy">
+      <div class="abertura-moldura" aria-hidden="true"></div>
+      <p class="abertura-texto" data-c="aberturaTexto">Entre.</p>
+    </div>
+  </section>
+
   <section class="estrutura" id="estrutura">
-    <h2 class="titulo-secao">Estrutura que<br>puxa pra cima.</h2>
+    <h2 class="titulo-secao">Estrutura que te <em>puxa</em> pra cima.</h2>
     <div class="estrutura-lista" id="estrutura-lista"></div>
   </section>
 
@@ -63,24 +73,23 @@
     <div class="galeria-trilho" id="galeria"></div>
   </section>
 
-  <section class="avaliacoes" id="avaliacoes">
-    <h2 class="titulo-secao">Quem treina,<br>assina embaixo.</h2>
-    <p class="avaliacoes-resumo"><span class="estrelas" aria-hidden="true">★★★★★</span> <strong data-c="notaGoogle"></strong> de 5 em <span data-c="totalAvaliacoes"></span> avaliações no Google</p>
+  <section class="avaliacoes papel" id="avaliacoes">
+    <h2 class="titulo-secao">Quem treina, <em>assina embaixo.</em></h2>
+    <p class="avaliacoes-resumo"><span class="estrelas" aria-hidden="true">★★★★★</span> <strong data-c="notaGoogle"></strong> de 5 · <span data-c="totalAvaliacoes"></span> avaliações no Google</p>
     <div class="avaliacoes-lista" id="avaliacoes-lista"></div>
     <a class="link-seta" id="link-avaliacoes" href="#" target="_blank" rel="noopener">Ver todas no Google</a>
   </section>
 
-
   <section class="endereco" id="endereco">
     <div class="endereco-info">
-      <h2 class="titulo-secao">Centro de<br>Ponta Porã.</h2>
+      <h2 class="titulo-secao">No Centro de <em>Ponta Porã.</em></h2>
       <address>
         <span data-c="endereco"></span><br>
         <span data-c="cidade"></span> · CEP <span data-c="cep"></span>
       </address>
       <dl class="horarios" id="horarios"></dl>
       <div class="endereco-acoes">
-        <a class="botao botao-contorno" id="como-chegar" href="#" target="_blank" rel="noopener">Como chegar</a>
+        <a class="botao" id="como-chegar" href="#" target="_blank" rel="noopener"><span>Como chegar</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="link-seta" data-wa href="#" data-c="telefoneTexto"></a>
       </div>
     </div>
@@ -90,28 +99,27 @@
   </section>
 
   <section class="final">
-    <img class="final-foto" src="assets/foto2.jpg" alt="" loading="lazy">
+    <img class="final-foto foto-pb" src="assets/foto11.jpg" alt="" loading="lazy">
     <div class="final-conteudo">
-      <h2 data-c="chamadaFinal"></h2>
+      <img class="final-logo" src="assets/logo.svg" alt="" width="96" height="100" loading="lazy">
+      <h2 id="chamada-final"></h2>
       <p data-c="chamadaFinalTexto"></p>
-      <a class="botao" data-wa href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span>Chamar no WhatsApp</span></a>
+      <a class="botao" data-wa href="#"><span>Chamar no WhatsApp</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
 </main>
 
 <footer class="rodape">
-  <div class="rodape-linha">
-    <span class="rodape-marca">UP GYM · Espaço Fitness</span>
-    <a id="link-insta" href="#" target="_blank" rel="noopener">Instagram</a>
-  </div>
-  <p class="rodape-assinatura">Site por Montiel</p>
+  <span>UP GYM · ESPAÇO FITNESS</span>
+  <a id="link-insta" href="#" target="_blank" rel="noopener">Instagram</a>
+  <span>Site por Montiel</span>
 </footer>
 
-<a class="wa-flutuante" data-wa href="#" aria-label="Falar com a UP Gym no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></a>
+<a class="wa-flutuante" data-wa href="#" aria-label="Falar com a UP Gym no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.950 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+</a>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
-</svg>
+<div class="grao" aria-hidden="true"></div>
 
 <script src="conteudo.js"></script>
 <script src="app.js"></script>
