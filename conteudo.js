@@ -8,7 +8,7 @@
    - Troque só o que está ENTRE ASPAS "assim".
    - Não apague as vírgulas do fim das linhas nem as chaves { } [ ].
    - Onde estiver escrito [EDITAR], é informação que ainda falta.
-   - Palavra entre *asteriscos* aparece em VERMELHO no site.
+   - Palavra entre *asteriscos* ganha o detalhe vermelho no site.
    - Depois de salvar no GitHub, o site atualiza sozinho em 1 ou 2 minutos.
    ===================================================================== */
 
@@ -40,7 +40,7 @@ window.CONTEUDO = {
   /* ---------- PRIMEIRA TELA (com o vídeo) ---------- */
 
   // TÍTULO GRANDE — cada linha entre aspas é uma linha no site
-  titulo: ["Suba", "de *nível*"],
+  titulo: ["Suba de", "*nível.*"],
 
   // FRASE EMBAIXO DO TÍTULO
   subtitulo: "A academia mais completa da fronteira. Musculação, ginástica e dança no Centro de Ponta Porã.",
@@ -56,8 +56,6 @@ window.CONTEUDO = {
   abre: "05h",
 
 
-  /* ---------- FAIXA DE PALAVRAS QUE CORRE NA TELA ---------- */
-  faixa: ["Musculação", "Ginástica", "Dança", "Real Leader", "Ambiente climatizado", "Aula experimental grátis"],
 
 
   /* ---------- FRASE DE IMPACTO ---------- */
@@ -132,6 +130,6 @@ window.CONTEUDO = {
 
 
   /* ---------- CHAMADA FINAL ---------- */
-  chamadaFinal: ["Sua primeira aula", "é por *nossa conta*"],
+  chamadaFinal: ["Sua primeira aula", "é por *nossa conta.*"],
   chamadaFinalTexto: "Chama no WhatsApp, escolhe o horário e vem sentir a UP Gym de perto."
 };

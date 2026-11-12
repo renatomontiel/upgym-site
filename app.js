@@ -23,8 +23,6 @@
   $("#manifesto-texto").innerHTML = fmt(C.manifesto);
   if (C.horarios && C.horarios[0]) $("#hero-horario").textContent = C.horarios[0].dia + " · " + C.horarios[0].hora;
 
-  var itens = (C.faixa || []).map(function (p) { return "<span>" + esc(p) + "</span>"; }).join("");
-  $("#faixa").innerHTML = itens + itens + itens + itens;
 
   $("#numeros").innerHTML = [
     [C.notaGoogle, "Nota no Google"], [C.totalAvaliacoes, "Avaliações"], [C.seguidores, "Seguidores no Instagram"], [C.abre, "Abre de segunda a sexta"]
@@ -86,7 +84,6 @@
   }
 
   // 1) o neon da logo acende + contador
-  var cont = { v: 0 }, num = $("#loader-num");
   var intro = g.timeline({ defaults: { ease: "expo.out" } });
   intro
     .to(".loader-logo", { duration: 0.05, opacity: 1 })
@@ -94,7 +91,6 @@
     .to(".loader-logo", { duration: 0.05, opacity: 1 }, "+=0.06")
     .to(".loader-logo", { duration: 0.04, opacity: 0.4 }, "+=0.12")
     .to(".loader-logo", { duration: 0.6, opacity: 1, filter: "drop-shadow(0 0 18px rgba(255,13,37,.85)) drop-shadow(0 0 60px rgba(255,13,37,.45))" })
-    .to(cont, { v: 100, duration: 1.1, ease: "power2.inOut", onUpdate: function () { num.textContent = String(Math.round(cont.v)).padStart(3, "0"); } }, 0)
     .to(".loader-logo", { scale: 0.9, opacity: 0, duration: 0.5, ease: "power2.in" }, "+=0.15")
     .to(loader, { clipPath: "inset(0 0 100% 0)", duration: 1, ease: "expo.inOut" }, "-=0.2")
     .add(function () { loader.remove(); doc.classList.remove("carregando"); lenis && lenis.start(); })
@@ -112,18 +108,6 @@
       topo.classList.toggle("some", y > window.innerHeight * 0.8 && self.direction === 1);
       ultimo = y;
     }
-  });
-
-  // 3) faixa que corre e acelera com a rolagem
-  var faixa = $("#faixa"), x = 0, metade = 0, vel = 0;
-  var medir = function () { metade = faixa.scrollWidth / 2; };
-  medir(); window.addEventListener("resize", medir);
-  g.ticker.add(function () {
-    var v = lenis ? lenis.velocity : 0;
-    vel += ((1 + Math.min(Math.abs(v) * 0.35, 6)) * (v < 0 ? -1 : 1) - vel) * 0.08;
-    x -= vel * 1.1;
-    if (x <= -metade) x += metade; if (x > 0) x -= metade;
-    faixa.style.transform = "translate3d(" + x + "px,0,0)";
   });
 
   // 4) títulos entram linha por linha
@@ -185,17 +169,6 @@
     g.from(a.children, { y: 40, opacity: 0, duration: 1, ease: "expo.out", stagger: 0.08, scrollTrigger: { trigger: a, start: "top 85%" } });
   });
   g.fromTo(".final-foto", { yPercent: -8 }, { yPercent: 8, ease: "none", scrollTrigger: { trigger: ".final", start: "top bottom", end: "bottom top", scrub: true } });
-  g.from(".rodape-marca", { yPercent: 60, opacity: 0, duration: 1.4, ease: "expo.out", scrollTrigger: { trigger: ".rodape", start: "top 95%" } });
-
-  // 10) cursor vermelho no PC
-  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-    var cur = $("#cursor"), qx = g.quickTo(cur, "x", { duration: 0.35, ease: "power3" }), qy = g.quickTo(cur, "y", { duration: 0.35, ease: "power3" });
-    window.addEventListener("mousemove", function (e) { cur.classList.add("ativo"); qx(e.clientX); qy(e.clientY); });
-    $$("a, button").forEach(function (el) {
-      el.addEventListener("mouseenter", function () { cur.classList.add("grande"); });
-      el.addEventListener("mouseleave", function () { cur.classList.remove("grande"); });
-    });
-  }
 
   window.addEventListener("load", function () { ST.refresh(); });
 })();
