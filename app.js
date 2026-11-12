@@ -43,15 +43,6 @@
     return '<figure class="avaliacao"><blockquote>“' + esc(a.texto) + '”</blockquote><figcaption>' + esc(a.nome) + " · avaliação no Google</figcaption></figure>";
   }).join("");
 
-  $("#planos-lista").innerHTML = (C.planos || []).map(function (p) {
-    var preco = /EDITAR/.test(p.preco) ? '<small>R$</small><span class="editar">' + esc(p.preco) + "</span>" : "<small>R$</small>" + esc(p.preco);
-    return '<article class="plano' + (p.destaque ? " destaque" : "") + '">' + (p.destaque ? '<span class="selo">Mais completo</span>' : "") +
-      "<h3>" + esc(p.nome) + '</h3><p class="plano-preco">' + preco + '</p><p class="plano-periodo">' + esc(p.periodo) + "</p>" +
-      "<ul>" + (p.itens || []).map(function (i) { return "<li>" + marca(i) + "</li>"; }).join("") + "</ul>" +
-      '<a class="botao" target="_blank" rel="noopener" href="https://wa.me/' + String(C.whatsapp).replace(/\D/g, "") + "?text=" +
-      encodeURIComponent("Olá! Vim pelo site e quero saber mais sobre o plano " + p.nome + " da UP Gym.") + '">Quero este plano</a></article>';
-  }).join("");
-
   $("#horarios").innerHTML = (C.horarios || []).map(function (h) { return "<dt>" + esc(h.dia) + "</dt><dd>" + marca(h.hora) + "</dd>"; }).join("");
   $("#como-chegar").href = C.linkMaps || "#";
   $("#link-avaliacoes").href = C.linkMaps || "#";

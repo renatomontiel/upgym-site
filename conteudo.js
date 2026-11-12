@@ -110,49 +110,6 @@ window.CONTEUDO = {
   ],
 
 
-  /* ---------- PLANOS ---------- */
-  // PREÇO — troque só o número. Ex.: "129,90"
-  // DESTAQUE — true deixa o plano em vermelho (só um deve ter true)
-  planos: [
-    {
-      nome: "Mensal",
-      preco: "[EDITAR]",
-      periodo: "por mês",
-      destaque: false,
-      itens: [
-        "Musculação liberada",
-        "[EDITAR: o que mais está incluso]"
-      ]
-    },
-    {
-      nome: "Plano Black",
-      preco: "[EDITAR]",
-      periodo: "por mês",
-      destaque: true,
-      itens: [
-        "Estrutura completa e aulas",
-        "Congelamento de até 60 dias",
-        "Bioimpedância [EDITAR: confirmar]",
-        "[EDITAR: fidelidade ou forma de pagamento]"
-      ]
-    },
-    {
-      nome: "Black em Dupla",
-      preco: "[EDITAR]",
-      periodo: "para 2 pessoas",
-      destaque: false,
-      itens: [
-        "2 pessoas, 1 preço especial",
-        "Mesmos benefícios do Plano Black",
-        "[EDITAR: regras da dupla]"
-      ]
-    }
-  ],
-
-  // DIÁRIA para quem não é aluno
-  diaria: "Diária para visitantes: R$ [EDITAR]",
-
-
   /* ---------- HORÁRIOS ---------- */
   horarios: [
     { dia: "Segunda a sexta", hora: "05h às 22h" },

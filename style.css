@@ -113,28 +113,8 @@ html{scrollbar-color:#3a3a3f var(--preto)}
 .avaliacao figcaption{color:var(--cinza);font-size:.92rem}
 @media (min-width:860px){.avaliacoes-lista{grid-template-columns:repeat(3,1fr);gap:40px;border-top:0}.avaliacao{border-bottom:0;border-top:2px solid var(--vermelho);padding-top:24px}}
 
-/* ---------- planos ---------- */
-.planos{max-width:var(--max);margin:0 auto;padding:0 var(--gutter) clamp(80px,12vw,160px)}
-.planos-lista{display:grid;gap:16px}
-.plano{position:relative;padding:30px 26px;border:1px solid var(--linha);border-radius:6px;background:var(--grafite);display:flex;flex-direction:column}
-.plano h3{margin:0 0 18px;font:800 1.9rem/1 var(--display);text-transform:uppercase}
-.plano-preco{font:900 clamp(2.6rem,7vw,3.4rem)/1 var(--display);margin:0}
-.plano-preco small{font:600 1rem var(--texto);margin-right:4px;vertical-align:.9em}
-.plano-periodo{color:var(--cinza);font-size:.92rem;margin:6px 0 22px}
-.plano ul{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:10px}
-.plano li{position:relative;padding-left:24px;color:#D7D6D2}
-.plano li::before{content:"";position:absolute;left:3px;top:.55em;width:8px;height:8px;border-top:2px solid var(--vermelho);border-left:2px solid var(--vermelho);transform:rotate(45deg)}
-.plano .botao{margin-top:auto}
-.plano.destaque{background:var(--vermelho);border-color:var(--vermelho)}
-.plano.destaque li{color:#fff}
-.plano.destaque li::before{border-color:#fff}
-.plano.destaque .plano-periodo{color:rgba(255,255,255,.85)}
-.plano.destaque .botao{background:var(--preto)}
-.plano.destaque .botao:hover{background:#000}
-.selo{position:absolute;top:-12px;left:26px;background:var(--preto);color:#fff;font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid var(--vermelho)}
+/* ---------- marcação de [EDITAR] ---------- */
 .editar{color:#FFC21A}
-.diaria{margin:22px 0 0;color:var(--cinza)}
-@media (min-width:860px){.planos-lista{grid-template-columns:repeat(3,1fr);align-items:stretch}.plano.destaque{transform:translateY(-14px)}}
 
 /* ---------- endereço ---------- */
 .endereco{max-width:var(--max);margin:0 auto;padding:0 var(--gutter) clamp(80px,12vw,160px);display:grid;gap:40px}
