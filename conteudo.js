@@ -22,6 +22,9 @@ window.CONTEUDO = {
   // MENSAGEM QUE JÁ VEM ESCRITA quando a pessoa clica no WhatsApp
   mensagemWhatsapp: "Olá! Vim pelo site e quero saber mais sobre a UP Gym.",
 
+  // MENSAGEM DOS BOTÕES "AULA GRÁTIS" (já chega pronta para agendar)
+  mensagemAula: "Olá! Vim pelo site e quero agendar minha aula experimental grátis na UP Gym. Qual o melhor horário?",
+
   // TELEFONE como aparece escrito no site
   telefoneTexto: "(67) 99917-5820",
 
@@ -31,13 +34,15 @@ window.CONTEUDO = {
   // ENDEREÇO
   endereco: "Rua 13 de Setembro, 2282",
   bairro: "Centro, Ponta Porã · MS",
-  cep: "79904-714",
+  cep: "79904-704",   // Correios (ViaCEP) e Google: Rua 13 de Setembro. O 714 do Instagram é a Rua Paraguai.
 
   // LINK DO GOOGLE MAPS (botão "Como chegar")
   linkMaps: "https://www.google.com/maps/search/?api=1&query=Up+Gym+Rua+13+de+Setembro+2282+Ponta+Por%C3%A3",
 
 
-  /* ---------- PRIMEIRA TELA (com o vídeo) ---------- */
+  /* ---------- PRIMEIRA TELA (com o vídeo) ----------
+     Fonte: bio do Instagram @upgym_academia ("A academia mais completa da fronteira!"
+     e "Venha fazer uma aula experimental gratuita!"), conferida em 12/11/2026. */
 
   // TÍTULO GRANDE — cada linha entre aspas é uma linha no site
   titulo: ["Suba de", "*nível.*"],
@@ -53,13 +58,12 @@ window.CONTEUDO = {
   notaGoogle: "4,8",
   totalAvaliacoes: "200",
   seguidores: "13,3 mil",
-  abre: "05h",
 
 
 
 
   /* ---------- FRASE DE IMPACTO ---------- */
-  manifesto: "Cansou do mesmo treino, dos mesmos aparelhos e do calor? Aqui a estrutura joga a seu favor: equipamento novo, ambiente climatizado e gente pronta pra te puxar pra *cima*.",
+  manifesto: "Cansou do mesmo treino, dos mesmos aparelhos e do calor? Aqui a estrutura joga a seu favor: equipamento novo, ambiente climatizado e gente pronta pra te ver *subir*.",
 
 
   /* ---------- ESTRUTURA (cada bloco: foto, título e texto) ---------- */
@@ -67,18 +71,18 @@ window.CONTEUDO = {
   estrutura: [
     {
       foto: "assets/foto5.jpg",
-      titulo: "Real Leader",
-      texto: "Extensora unilateral, remada, leg press e simulador de escada. Aparelho novo, que encaixa no seu corpo e no seu nível."
+      titulo: "Aparelhos Real Leader",
+      texto: "Como a extensora unilateral."
     },
     {
       foto: "assets/foto3.jpg",
       titulo: "Esteiras conectadas",
-      texto: "Tela touch com YouTube, Bluetooth, carregador por indução, inclinação automática e programas de treino prontos."
+      texto: "Tela touch, Bluetooth, carregador por indução e inclinação automática."
     },
     {
       foto: "assets/foto4.jpg",
       titulo: "Peso livre",
-      texto: "Racks, barras e anilhas para quem leva o treino de força a sério."
+      texto: "Racks, barras e anilhas pra quem leva o treino de força a sério."
     },
     {
       foto: "assets/foto2.jpg",
@@ -88,7 +92,7 @@ window.CONTEUDO = {
     {
       foto: "assets/foto8.jpg",
       titulo: "Ginástica e dança",
-      texto: "Aulas para quem gosta de treinar em grupo, com instrutor por perto o tempo todo."
+      texto: "Aulas pra quem gosta de treinar em grupo."
     }
   ],
 
@@ -104,29 +108,68 @@ window.CONTEUDO = {
   ],
 
 
-  /* ---------- AVALIAÇÕES (só avaliações REAIS do Google) ---------- */
-  avaliacoes: [
-    {
-      nome: "evelizevaliente valiente",
-      texto: "Está entre as top 5 do MS, tudo é excelente, aparelhagem, atendimento, limpeza, bom demais."
-    },
-    {
-      nome: "Leandro Nunes",
-      texto: "Bons equipamentos, modernos, boa estrutura, valor da diária para não alunos ok."
-    },
-    {
-      nome: "Ozymandias",
-      texto: "Treino todos os dias, local limpo e sempre com novidades."
-    }
+  /* ---------- AVALIAÇÕES ----------
+     As avaliações que correm no site ficam no arquivo avaliacoes.js
+     (todas reais, copiadas do Google Maps). */
+
+
+  /* ---------- PERSONAIS ----------
+     Exemplo para o dono preencher. Para cada personal:
+     nome, especialidade, contato (como aparece escrito),
+     whatsapp (só números, com 55 + DDD) e foto (ex.: "assets/personal-joao.jpg").
+     Foto do rosto olhando para a câmera vende mais.
+     Só publique quem autorizou aparecer no site. */
+  personais: [
+    { nome: "Personal 1", especialidade: "Hipertrofia", contato: "(67) 9XXXX-XXXX", whatsapp: "", foto: "" },
+    { nome: "Personal 2", especialidade: "Condicionamento", contato: "(67) 9XXXX-XXXX", whatsapp: "", foto: "" },
+    { nome: "Personal 3", especialidade: "Treino feminino", contato: "(67) 9XXXX-XXXX", whatsapp: "", foto: "" },
+    { nome: "Personal 4", especialidade: "Iniciantes", contato: "(67) 9XXXX-XXXX", whatsapp: "", foto: "" },
+    { nome: "Personal 5", especialidade: "Força e performance", contato: "(67) 9XXXX-XXXX", whatsapp: "", foto: "" },
+    { nome: "Personal 6", especialidade: "Terceira idade", contato: "(67) 9XXXX-XXXX", whatsapp: "", foto: "" }
+  ],
+
+
+  /* ---------- PRIMEIRA VEZ (acolhimento) ----------
+     Os 3 passos da aula grátis. [CONFIRMAR com o dono como é de fato a aula.] */
+  passos: [
+    { titulo: "Chama no WhatsApp", texto: "Escolhe o dia e o horário que cabem na sua rotina." },
+    { titulo: "Vem conhecer", texto: "A academia e os aparelhos, de perto." },
+    { titulo: "Primeiro treino", texto: "Do seu jeito, no seu ritmo." }
+  ],
+
+  /* ---------- DÚVIDAS RÁPIDAS ----------
+     Só respostas verdadeiras (estacionamento, ducha e café vêm das avaliações do Google). */
+  duvidas: [
+    { pergunta: "Nunca treinei. Posso?", resposta: "Pode. A aula grátis é pra isso." },
+    { pergunta: "Tem estacionamento?", resposta: "Tem, e amplo." },
+    { pergunta: "Tem ducha e café?", resposta: "Tem ducha e cafezinho quente." },
+    { pergunta: "Qual o horário?", resposta: "Segunda a sexta, das 05h às 22h. Sábado, das 08h às 18h. Domingo, das 09h às 13h." },
+    { pergunta: "Quanto custa?", resposta: "Os planos e a diária a gente passa no WhatsApp, na hora e sem compromisso." }
   ],
 
 
   /* ---------- HORÁRIOS ---------- */
   horarios: [
     { dia: "Segunda a sexta", hora: "05h às 22h" },
-    { dia: "Sábado", hora: "[EDITAR]" },
-    { dia: "Domingo e feriados", hora: "[EDITAR]" }
+    { dia: "Sábado", hora: "08h às 18h" },
+    { dia: "Domingo", hora: "09h às 13h" }
   ],
+
+
+  /* ---------- MOVIMENTO (gráfico "Melhores horários") ----------
+     Números do Google Maps: quanto a academia costuma encher em cada
+     hora (100 = hora mais cheia da semana). null = Google sem dado.
+     Lidos em 12/11/2026. Para atualizar, copie de novo do Google Maps. */
+  movimentoFonte: "Média do Google Maps",
+  movimento: {
+    seg: { abre: 5, valores: [24, 32, 31, 28, 31, 34, 36, 41, 45, 56, 70, 83, 97, 100, 83, 59, 35] },
+    ter: { abre: 5, valores: [25, 31, 29, 25, 29, 37, 43, 43, 49, 56, 71, 79, 93, 94, 83, 60, 33] },
+    qua: { abre: 5, valores: [25, 36, 39, 35, 38, 44, 43, 40, 38, 45, 55, 72, 90, 98, 88, 64, 39] },
+    qui: { abre: 5, valores: [20, 30, 33, 31, 33, 40, 43, 44, 44, 47, 54, 66, 81, 85, 76, 57, null] },
+    sex: { abre: 5, valores: [16, 24, 28, 28, 30, 32, 33, 35, 36, 42, 53, 64, 75, 78, 74, 63, 44] },
+    sab: { abre: 8, valores: [12, 19, 22, 24, 22, 27, 35, 42, 40, 32] },
+    dom: { abre: 9, valores: [18, 23, 22, 16] }
+  },
 
 
   /* ---------- CHAMADA FINAL ---------- */
